@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Sharifuzzaman Hasan — Software Engineer</title>
+    <meta
+      name="description"
+      content="Sharifuzzaman Hasan is a full-stack software engineer in Dhaka with a backend focus — scalable, domain-driven APIs, real-time features and automation in Node.js, plus React, Next.js and Tailwind CSS interfaces."
+    />
+    <meta name="author" content="Sharifuzzaman Hasan" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0b0b0a" />
+    <link rel="canonical" href="https://sharifuzzamanshaon.github.io/" />
+
+    <!-- Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sharifuzzamanshaon.github.io/" />
+    <meta property="og:site_name" content="Sharifuzzaman Hasan" />
+    <meta property="og:title" content="Sharifuzzaman Hasan — Software Engineer" />
+    <meta
+      property="og:description"
+      content="I build the systems behind the screen — and the screens too. Full-stack engineer: Node.js APIs, real-time systems, React and Next.js interfaces."
+    />
+    <meta property="og:image" content="https://sharifuzzamanshaon.github.io/assets/img/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sharifuzzaman Hasan — I build the systems behind the screen." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sharifuzzaman Hasan — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="I build the systems behind the screen — and the screens too. Full-stack engineer: Node.js APIs, real-time systems, React and Next.js interfaces."
+    />
+    <meta name="twitter:image" content="https://sharifuzzamanshaon.github.io/assets/img/og.png" />
+
+    <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Instrument+Serif:ital@0;1&family=Mona+Sans:wdth,wght@75..125,200..900&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Theme + motion flags (runs before first paint) -->
+    <script>
+      (function () {
+        var d = document.documentElement;
+        var light = window.matchMedia("(prefers-color-scheme: light)").matches;
+        var theme = light ? "light" : "dark";
+        try {
+          var saved = localStorage.getItem("theme");
+          if (saved === "light" || saved === "dark") theme = saved;
+        } catch (e) {}
+        d.setAttribute("data-theme", theme);
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute("content", theme === "light" ? "#f2f0ea" : "#0b0b0a");
+        d.classList.remove("no-js");
+        d.classList.add("js");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          d.classList.add("motion");
+          try {
+            if (!sessionStorage.getItem("intro-seen")) d.classList.add("has-intro");
+          } catch (e) {}
+          // Safety net: never leave content hidden if the scripts fail to load.
+          setTimeout(function () {
+            if (!window.__siteReady) d.classList.remove("motion", "has-intro");
+          }, 6000);
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sharifuzzaman Hasan",
+        "alternateName": "Shaon",
+        "jobTitle": "Software Engineer",
+        "url": "https://sharifuzzamanshaon.github.io/",
+        "image": "https://sharifuzzamanshaon.github.io/assets/img/portrait.jpg",
+        "email": "mailto:shasan2200@gmail.com",
+        "worksFor": { "@type": "Organization", "name": "Codixel Tech" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Southeast University" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+        "knowsAbout": ["Node.js", "Express", "TypeScript", "PostgreSQL", "MongoDB", "Redis", "Socket.IO", "Domain-Driven Design", "React", "Next.js", "Tailwind CSS"],
+        "sameAs": [
+          "https://github.com/SharifuzzamanShaon",
+          "https://www.linkedin.com/in/sharifuzzaman-hasan-0b561521a/"
+        ]
+      }
+    </script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/SplitText.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <symbol id="i-arrow-ur" viewBox="0 0 16 16">
+        <path d="M4.5 11.5 11.5 4.5M5.75 4.5h5.75v5.75" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 16 16">
+        <path d="M8 3v10M3.75 8.75 8 13l4.25-4.25" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 16 16">
+        <path d="M8 13V3M3.75 7.25 8 3l4.25 4.25" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+    </svg>
+
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- Intro (first visit per session) -->
+    <div class="intro" aria-hidden="true">
+      <div class="intro__inner wrap">
+        <div class="intro__meta">
+          <span class="intro__line"><span>Sharifuzzaman Hasan</span></span>
+          <span class="intro__line intro__sub"><span>Software Engineer — Portfolio ©2026</span></span>
+        </div>
+        <div class="intro__count"><span class="intro__num">0</span></div>
+      </div>
+      <div class="intro__bar"><span></span></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="top">
+      <div class="header__inner wrap">
+        <a class="brand" href="#top" aria-label="Sharifuzzaman Hasan — back to top">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__name">Sharifuzzaman Hasan</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#about">About</a></li>
+            <li><a class="nav__link" href="#work">Work</a></li>
+            <li><a class="nav__link" href="#experience">Experience</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button class="theme-toggle" type="button" aria-label="Switch theme">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <circle cx="10" cy="10" r="7.25" fill="none" stroke="currentColor" stroke-width="1.4" />
+              <path d="M10 2.75a7.25 7.25 0 0 1 0 14.5Z" fill="currentColor" />
+            </svg>
+          </button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="menu-toggle__label" data-open="Menu" data-close="Close">Menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="menu" id="menu" hidden>
+      <nav class="menu__nav wrap" aria-label="Mobile">
+        <a class="menu__link" href="#about"><span class="menu__idx">01</span><span class="menu__text">About</span></a>
+        <a class="menu__link" href="#work"><span class="menu__idx">02</span><span class="menu__text">Work</span></a>
+        <a class="menu__link" href="#experience"><span class="menu__idx">03</span><span class="menu__text">Experience</span></a>
+        <a class="menu__link" href="#contact"><span class="menu__idx">07</span><span class="menu__text">Contact</span></a>
+      </nav>
+      <div class="menu__foot wrap">
+        <a class="u" href="mailto:shasan2200@gmail.com">shasan2200@gmail.com</a>
+        <div class="menu__social">
+          <a class="u" href="https://www.linkedin.com/in/sharifuzzaman-hasan-0b561521a/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="u" href="https://github.com/SharifuzzamanShaon" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ───────────── HERO ───────────── -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__lines wrap" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="hero__inner wrap">
+          <dl class="hero__meta">
+            <div class="meta">
+              <dt>Role</dt>
+              <dd>Software Engineer</dd>
+            </div>
+            <div class="meta">
+              <dt>Focus</dt>
+              <dd>Full-stack, backend-first</dd>
+            </div>
+            <div class="meta">
+              <dt>Local time</dt>
+              <dd>Dhaka — <time class="clock" data-clock="hms">--:--:--</time></dd>
+            </div>
+            <div class="meta">
+              <dt>Currently</dt>
+              <dd><span class="pulse" aria-hidden="true"></span>Codixel Tech</dd>
+            </div>
+          </dl>
+
+          <h1 class="hero__title" id="hero-title">
+            <span class="hero__l1">I build the systems</span>
+            <span class="hero__l2"><em>behind the screen.</em></span>
+          </h1>
+
+          <div class="hero__foot">
+            <p class="hero__lede">
+              Full-stack software engineer, backend first — domain-driven APIs, real-time features and
+              automation in Node.js, and the React, Next.js &amp; Tailwind interfaces in front of them.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--solid" href="#work" data-magnetic>
+                <span class="btn__label"><span class="btn__text" data-text="Selected work">Selected work</span></span>
+                <span class="btn__icon ico ico--down"><svg class="i"><use href="#i-arrow-down" /></svg></span>
+              </a>
+              <a class="btn btn--ghost" href="assets/Sharifuzzaman-Hasan-CV.pdf" target="_blank" rel="noopener" data-magnetic>
+                <span class="btn__label"><span class="btn__text" data-text="Résumé">Résumé</span></span>
+                <span class="btn__icon ico ico--ur"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── 01 ABOUT ───────────── -->
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="label"><span class="label__idx">01</span><span>About</span></p>
+            <h2 class="visually-hidden" id="about-title">About</h2>
+          </div>
+
+          <div class="about__grid">
+            <figure class="about__portrait">
+              <div class="about__img">
+                <img
+                  src="assets/img/portrait.jpg"
+                  alt="Portrait of Sharifuzzaman Hasan"
+                  width="460"
+                  height="460"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <figcaption>
+                <span>Sharifuzzaman Hasan</span>
+                <span>Dhaka, Bangladesh</span>
+              </figcaption>
+            </figure>
+
+            <div class="about__body">
+              <p class="about__statement" data-words>
+                I’m a full-stack engineer who starts with what happens <em>after the click</em> —
+                domain-driven systems, robust APIs and real-time features — and carries it through to the
+                React and Next.js interfaces people actually use. Clean architecture, performance and
+                reliability aren’t extras; they’re the job.
+              </p>
+
+              <dl class="facts" data-stagger>
+                <div class="fact">
+                  <dt>Currently</dt>
+                  <dd>Software Engineer at Codixel Tech</dd>
+                </div>
+                <div class="fact">
+                  <dt>Based in</dt>
+                  <dd>Dhaka, Bangladesh</dd>
+                </div>
+                <div class="fact">
+                  <dt>Focus</dt>
+                  <dd>Full-stack — APIs, real-time &amp; React UIs</dd>
+                </div>
+                <div class="fact">
+                  <dt>Education</dt>
+                  <dd>BSc in CSE, Southeast University</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="impact">
+            <p class="impact__title label"><span>Impact, by the numbers</span></p>
+            <ul class="impact__grid" data-stagger>
+              <li class="impact__item">
+                <p class="impact__num"><span data-count="30">30</span><span class="impact__unit">%</span></p>
+                <p class="impact__label">Faster API responses</p>
+                <p class="impact__note">Query tuning &amp; indexing</p>
+              </li>
+              <li class="impact__item">
+                <p class="impact__num"><span data-count="25">25</span><span class="impact__unit">%</span></p>
+                <p class="impact__label">Less server storage</p>
+                <p class="impact__note">Automated cron cleanup</p>
+              </li>
+              <li class="impact__item">
+                <p class="impact__num">
+                  <span class="impact__approx">~</span><span data-count="40">40</span><span class="impact__unit">%</span>
+                </p>
+                <p class="impact__label">Faster ops dashboards</p>
+                <p class="impact__note">Priority-queue workflow</p>
+              </li>
+              <li class="impact__item">
+                <p class="impact__num"><span data-count="60">60</span><span class="impact__unit">%</span></p>
+                <p class="impact__label">Less manual workload</p>
+                <p class="impact__note">OMR exam automation</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── 02 WORK ───────────── -->
+      <section class="section work" id="work" aria-labelledby="work-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="label"><span class="label__idx">02</span><span>Selected work</span></p>
+            <div class="section__titles">
+              <h2 class="section__title" id="work-title" data-split>Production systems, <em>shipped.</em></h2>
+              <p class="section__intro" data-fade>
+                Three platforms running in production — and the architecture underneath them.
+                <span class="only-hover">Hover a highlight to trace it through the system.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 01 -->
+          <article class="project" aria-labelledby="p1-title">
+            <header class="project__head">
+              <p class="project__kicker"><span>01 / 03</span><span>Team apparel e-commerce · Multi-tenant B2B</span></p>
+              <h3 class="project__title" id="p1-title" data-split>100PercentCustom</h3>
+              <a class="project__link link-arrow" href="https://www.100percentcustom.com" target="_blank" rel="noopener">
+                <span class="u">100percentcustom.com</span>
+                <span class="ico ico--ur"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </header>
+
+            <div class="project__body">
+              <figure
+                class="diagram"
+                role="img"
+                aria-label="System diagram: the 3D builder, live chat and production queue talk to a core Express API secured with JWT, which persists to MySQL through Prisma. Stripe webhooks and scheduled cron jobs feed events into the API."
+                data-edges='[["builder","api","req","one","hv"],["stripe","api","evt","one","hv"],["chat","api","req","both"],["api","db","req","both"],["queue","api","req","both","hv"],["cron","api","evt","one","hv"]]'
+              >
+                <div class="diagram__cap"><span>Fig. 01 — Commerce core</span><span class="diagram__live"><i></i>Live flow</span></div>
+                <div class="diagram__stage">
+                  <svg class="diagram__wires" aria-hidden="true"></svg>
+                  <div class="diagram__grid" style="--rows: 3">
+                    <div class="node" data-node="builder" style="grid-area: 1 / 1"><span class="node__label">3D Builder</span><span class="node__sub">Next.js client</span></div>
+                    <div class="node" data-node="stripe" style="grid-area: 1 / 3"><span class="node__label">Stripe</span><span class="node__sub">webhooks</span></div>
+                    <div class="node" data-node="chat" style="grid-area: 2 / 1"><span class="node__label">Live chat</span><span class="node__sub">Socket.IO</span></div>
+                    <div class="node node--hub" data-node="api" style="grid-area: 2 / 2"><span class="node__label">Core API</span><span class="node__sub">Express · JWT</span></div>
+                    <div class="node" data-node="db" style="grid-area: 2 / 3"><span class="node__label">MySQL</span><span class="node__sub">Prisma</span></div>
+                    <div class="node" data-node="queue" style="grid-area: 3 / 1"><span class="node__label">Production</span><span class="node__sub">priority queue</span></div>
+                    <div class="node" data-node="cron" style="grid-area: 3 / 3"><span class="node__label">Cron jobs</span><span class="node__sub">node-cron</span></div>
+                  </div>
+                </div>
+                <div class="diagram__legend"><span><i class="lg lg--req"></i>Request</span><span><i class="lg lg--evt"></i>Event</span></div>
+              </figure>
+
+              <div class="project__info">
+                <p class="project__summary" data-fade>
+                  A premium customization platform where teams, academies and leagues design, save and order
+                  custom gear in a 3D builder. I architected the multi-tenant backend behind it.
+                </p>
+                <dl class="project__meta" data-fade>
+                  <div><dt>Role</dt><dd>Full-stack backend engineer</dd></div>
+                </dl>
+                <ol class="project__list" data-stagger>
+                  <li data-nodes="builder api db">Backend for the 3D configurator — customizable models, dynamic pricing and design state that persists from customization to checkout and production.</li>
+                  <li data-nodes="builder api">Contributed to the Next.js front end — React and Tailwind CSS — built on top of the same API.</li>
+                  <li data-nodes="stripe api">Stripe Payment Intents and webhooks with real-time order synchronization.</li>
+                  <li data-nodes="queue api db">Order and factory production workflow with priority queues and artwork approval — about 40% faster dashboards.</li>
+                  <li data-nodes="chat api">Real-time support chat on Socket.IO with JWT auth, guest sessions, presence and emailed transcripts.</li>
+                  <li data-nodes="cron api">node-cron automation that closes expired stores and enforces a 90-day chat-retention policy.</li>
+                </ol>
+                <ul class="tags" aria-label="Stack" data-fade>
+                  <li>Node.js</li><li>Express</li><li>MySQL</li><li>Prisma</li><li>Stripe</li><li>Socket.IO</li><li>Firebase</li><li>JWT</li><li>Next.js</li><li>React</li><li>Tailwind CSS</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 02 -->
+          <article class="project" aria-labelledby="p2-title">
+            <header class="project__head">
+              <p class="project__kicker"><span>02 / 03</span><span>Exam-prep SaaS · REST API</span></p>
+              <h3 class="project__title" id="p2-title" data-split>MCQEntra</h3>
+              <a class="project__link link-arrow" href="https://www.mcqentra.com" target="_blank" rel="noopener">
+                <span class="u">mcqentra.com</span>
+                <span class="ico ico--ur"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </header>
+
+            <div class="project__body">
+              <figure
+                class="diagram"
+                role="img"
+                aria-label="System diagram: the Flutter app calls a REST API that handles payments. The API drives an exam engine that draws from a question bank and writes pre-computed results, which feed live rankings and performance analytics."
+                data-edges='[["app","api","req","both"],["pay","api","evt","one"],["api","engine","req","one"],["bank","engine","req","one"],["engine","results","req","one"],["results","rank","req","one"],["results","analytics","req","one"]]'
+              >
+                <div class="diagram__cap"><span>Fig. 02 — Exam pipeline</span><span class="diagram__live"><i></i>Live flow</span></div>
+                <div class="diagram__stage">
+                  <svg class="diagram__wires" aria-hidden="true"></svg>
+                  <div class="diagram__grid" style="--rows: 3">
+                    <div class="node" data-node="app" style="grid-area: 1 / 1"><span class="node__label">Flutter app</span><span class="node__sub">mobile client</span></div>
+                    <div class="node" data-node="api" style="grid-area: 1 / 2"><span class="node__label">REST API</span><span class="node__sub">auth · plans</span></div>
+                    <div class="node" data-node="pay" style="grid-area: 1 / 3"><span class="node__label">Payments</span><span class="node__sub">subscriptions</span></div>
+                    <div class="node" data-node="bank" style="grid-area: 2 / 1"><span class="node__label">Questions</span><span class="node__sub">topic bank</span></div>
+                    <div class="node node--hub" data-node="engine" style="grid-area: 2 / 2"><span class="node__label">Exam engine</span><span class="node__sub">largest remainder</span></div>
+                    <div class="node" data-node="rank" style="grid-area: 3 / 1"><span class="node__label">Rankings</span><span class="node__sub">percentiles</span></div>
+                    <div class="node" data-node="results" style="grid-area: 3 / 2"><span class="node__label">Results</span><span class="node__sub">pre-computed</span></div>
+                    <div class="node" data-node="analytics" style="grid-area: 3 / 3"><span class="node__label">Analytics</span><span class="node__sub">weak topics</span></div>
+                  </div>
+                </div>
+                <div class="diagram__legend"><span><i class="lg lg--req"></i>Request</span><span><i class="lg lg--evt"></i>Event</span></div>
+              </figure>
+
+              <div class="project__info">
+                <p class="project__summary" data-fade>
+                  A competitive-exam preparation platform for BCS, NTRCA and bank-job candidates in Bangladesh.
+                  I built the production REST API behind its Flutter app — exam generation, subscriptions,
+                  live rankings, analytics and payments.
+                </p>
+                <dl class="project__meta" data-fade>
+                  <div><dt>Role</dt><dd>Backend engineer</dd></div>
+                </dl>
+                <ol class="project__list" data-stagger>
+                  <li data-nodes="bank engine api">Exam generation engine using largest-remainder allocation with a 3-level fallback for balanced question distribution.</li>
+                  <li data-nodes="engine results">Pre-computed scores and analytics, so fetching any result is a single indexed lookup.</li>
+                  <li data-nodes="results rank">Live rankings and percentiles with standard competition ranking, multi-level tiebreakers and localized leaderboard windows.</li>
+                  <li data-nodes="results analytics">Performance analytics that surface weak topics, subject-wise accuracy and guessing patterns.</li>
+                </ol>
+                <ul class="tags" aria-label="Scope" data-fade>
+                  <li>REST API</li><li>Exam engine</li><li>Subscriptions</li><li>Payments</li><li>Rankings</li><li>Analytics</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 03 -->
+          <article class="project" aria-labelledby="p3-title">
+            <header class="project__head">
+              <p class="project__kicker"><span>03 / 03</span><span>Legal exam preparation · Online exams</span></p>
+              <h3 class="project__title" id="p3-title" data-split>LawEntra</h3>
+              <a class="project__link link-arrow" href="https://lawentra.com" target="_blank" rel="noopener">
+                <span class="u">lawentra.com</span>
+                <span class="ico ico--ur"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </header>
+
+            <div class="project__body">
+              <figure
+                class="diagram"
+                role="img"
+                aria-label="System diagram: candidates sign in through an auth service guarded by single-session control, then reach an Express API that serves secure MCQ exams and stores data in MySQL."
+                data-edges='[["client","auth","req","both"],["auth","session","evt","both"],["auth","api","req","one"],["api","exams","req","both"],["api","db","req","both"]]'
+              >
+                <div class="diagram__cap"><span>Fig. 03 — Secure exam flow</span><span class="diagram__live"><i></i>Live flow</span></div>
+                <div class="diagram__stage">
+                  <svg class="diagram__wires" aria-hidden="true"></svg>
+                  <div class="diagram__grid" style="--rows: 2">
+                    <div class="node" data-node="client" style="grid-area: 1 / 1"><span class="node__label">Candidate</span><span class="node__sub">web client</span></div>
+                    <div class="node" data-node="auth" style="grid-area: 1 / 2"><span class="node__label">Auth</span><span class="node__sub">sign-in</span></div>
+                    <div class="node" data-node="session" style="grid-area: 1 / 3"><span class="node__label">Session</span><span class="node__sub">single device</span></div>
+                    <div class="node" data-node="exams" style="grid-area: 2 / 1"><span class="node__label">MCQ exams</span><span class="node__sub">secure flow</span></div>
+                    <div class="node node--hub" data-node="api" style="grid-area: 2 / 2"><span class="node__label">Express API</span><span class="node__sub">Node.js</span></div>
+                    <div class="node" data-node="db" style="grid-area: 2 / 3"><span class="node__label">MySQL</span><span class="node__sub">storage</span></div>
+                  </div>
+                </div>
+                <div class="diagram__legend"><span><i class="lg lg--req"></i>Request</span><span><i class="lg lg--evt"></i>Event</span></div>
+              </figure>
+
+              <div class="project__info">
+                <p class="project__summary" data-fade>
+                  A legal exam-preparation platform. I built the complete backend for its secure online MCQ
+                  examination system.
+                </p>
+                <dl class="project__meta" data-fade>
+                  <div><dt>Role</dt><dd>Backend engineer</dd></div>
+                </dl>
+                <ol class="project__list" data-stagger>
+                  <li data-nodes="client auth api exams">Secure online MCQ examination flow, from sign-in to submission.</li>
+                  <li data-nodes="auth session">Single-session login control — one active session per candidate.</li>
+                  <li data-nodes="api db exams">Complete backend built with Node.js, Express and MySQL.</li>
+                </ol>
+                <ul class="tags" aria-label="Stack" data-fade>
+                  <li>Node.js</li><li>Express</li><li>MySQL</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ───────────── 03 EXPERIENCE ───────────── -->
+      <section class="section experience" id="experience" aria-labelledby="exp-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="label"><span class="label__idx">03</span><span>Experience</span></p>
+            <div class="section__titles">
+              <h2 class="section__title" id="exp-title" data-split>Building at <em>Codixel Tech.</em></h2>
+            </div>
+          </div>
+
+          <div class="job">
+            <aside class="job__aside">
+              <div class="job__card" data-fade>
+                <p class="job__dates"><span class="pulse" aria-hidden="true"></span>Jul 2025 — Present</p>
+                <h3 class="job__role">Software Engineer</h3>
+                <p class="job__company">Codixel Tech · Mohammadpur, Dhaka</p>
+                <ul class="tags" aria-label="Stack">
+                  <li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>MongoDB</li><li>Socket.IO</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>GSAP</li>
+                </ul>
+              </div>
+            </aside>
+
+            <ol class="job__list" data-stagger>
+              <li><span class="job__n">01</span><p>Engineered full-stack products — Node.js, Express, PostgreSQL and MongoDB on the server; React, Next.js and Tailwind CSS interfaces with GSAP animation on the client — including a high-performance 3D customization platform.</p></li>
+              <li><span class="job__n">02</span><p>Built a real-time live-chat system on Socket.IO — authenticated agents and anonymous guests, room-based routing, presence tracking and auto-emailed transcripts.</p></li>
+              <li><span class="job__n">03</span><p>Improved API response times by <strong>30%</strong> through query tuning and indexing.</p></li>
+              <li><span class="job__n">04</span><p>Cut server storage by <strong>25%</strong> with a cron-based cleanup of unused data assets.</p></li>
+              <li><span class="job__n">05</span><p>Developed an online MCQ exam platform with OMR-based answer processing, automated question-bank management and result generation — <strong>60%</strong> less manual work.</p></li>
+              <li><span class="job__n">06</span><p>Engineered an automated admin panel with role-based access control for multiple business roles and sub-admin dashboards, with real-time status tracking and monitoring.</p></li>
+              <li><span class="job__n">07</span><p>Applied Domain-Driven Design for modularity, scalability and long-term maintainability.</p></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── 04 SIDE PROJECTS ───────────── -->
+      <section class="section archive" id="projects" aria-labelledby="archive-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="label"><span class="label__idx">04</span><span>Open source</span></p>
+            <div class="section__titles">
+              <h2 class="section__title" id="archive-title" data-split>Side projects &amp; <em>experiments.</em></h2>
+              <a class="section__more link-arrow" href="https://github.com/SharifuzzamanShaon" target="_blank" rel="noopener" data-fade>
+                <span class="u">All repositories on GitHub</span>
+                <span class="ico ico--ur"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </div>
+          </div>
+
+          <ul class="archive__list" data-stagger>
+            <li>
+              <a class="archive__row" href="https://github.com/SharifuzzamanShaon/LMS-APP-Frontend" target="_blank" rel="noopener">
+                <span class="archive__name">LMS Web App</span>
+                <span class="archive__desc">User and admin panels for a learning platform, with React-Redux state and RTK Query data fetching.</span>
+                <span class="archive__stack">Next.js 14 · React · Redux Toolkit</span>
+                <span class="archive__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+            <li>
+              <a class="archive__row" href="https://github.com/SharifuzzamanShaon/LMS-APP-Backend" target="_blank" rel="noopener">
+                <span class="archive__name">LMS API</span>
+                <span class="archive__desc">The learning platform’s API — real-time notifications and Redis in-memory caching.</span>
+                <span class="archive__stack">Node.js · Express · Redis</span>
+                <span class="archive__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+            <li>
+              <a class="archive__row" href="https://github.com/SharifuzzamanShaon/chat-app-MERN" target="_blank" rel="noopener">
+                <span class="archive__name">Realtime Chat</span>
+                <span class="archive__desc">One-to-one and group messaging — a React UI over Socket.IO, secured with JWT.</span>
+                <span class="archive__stack">React · Express · MongoDB · Socket.IO</span>
+                <span class="archive__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+            <li>
+              <a class="archive__row" href="https://github.com/SharifuzzamanShaon/URL-shortener" target="_blank" rel="noopener">
+                <span class="archive__name">URL Shortener</span>
+                <span class="archive__desc">Turns long URLs into short, unique identifiers that redirect instantly.</span>
+                <span class="archive__stack">Node.js · Express · MongoDB</span>
+                <span class="archive__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+            <li>
+              <a class="archive__row" href="https://github.com/SharifuzzamanShaon/student-attendance-API-Development-Best-Practices-" target="_blank" rel="noopener">
+                <span class="archive__name">Attendance API</span>
+                <span class="archive__desc">Student attendance REST API structured around backend best practices.</span>
+                <span class="archive__stack">Node.js · Express · MongoDB</span>
+                <span class="archive__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+            <li>
+              <a class="archive__row" href="https://github.com/SharifuzzamanShaon/Expenses-Tracker-Native-App-Mobile-" target="_blank" rel="noopener">
+                <span class="archive__name">Expense Tracker</span>
+                <span class="archive__desc">Mobile app for tracking daily expenses and income at a glance.</span>
+                <span class="archive__stack">React Native</span>
+                <span class="archive__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ───────────── 05 TOOLKIT ───────────── -->
+      <section class="section toolkit" id="toolkit" aria-labelledby="toolkit-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="label"><span class="label__idx">05</span><span>Toolkit</span></p>
+            <div class="section__titles">
+              <h2 class="section__title" id="toolkit-title" data-split>The stack I <em>reach for.</em></h2>
+            </div>
+          </div>
+
+          <dl class="toolkit__list" data-stagger>
+            <div class="toolkit__row"><dt>Languages</dt><dd>JavaScript, TypeScript, C &amp; C++, Go <span class="muted">(familiar)</span></dd></div>
+            <div class="toolkit__row"><dt>Backend</dt><dd>Node.js, Express, Mongoose, Prisma, Socket.IO</dd></div>
+            <div class="toolkit__row"><dt>Frontend</dt><dd>React, Next.js, Tailwind CSS, Redux Toolkit, GSAP</dd></div>
+            <div class="toolkit__row"><dt>Databases</dt><dd>PostgreSQL, MySQL, MongoDB, Redis</dd></div>
+            <div class="toolkit__row"><dt>Architecture</dt><dd>REST, GraphQL, WebSockets, Domain-Driven Design</dd></div>
+            <div class="toolkit__row"><dt>Platforms</dt><dd>Git &amp; GitHub, Docker, AWS <span class="muted">(basic)</span>, VPS, Vercel</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ───────────── 06 BACKGROUND ───────────── -->
+      <section class="section background" id="background" aria-labelledby="bg-title">
+        <div class="wrap">
+          <div class="section__head">
+            <p class="label"><span class="label__idx">06</span><span>Background</span></p>
+            <div class="section__titles">
+              <h2 class="section__title" id="bg-title" data-split>Education &amp; <em>recognition.</em></h2>
+            </div>
+          </div>
+
+          <div class="bg__grid">
+            <div class="bg__col">
+              <h3 class="bg__heading">Education</h3>
+              <ul class="bg__list" data-stagger>
+                <li class="bg__item">
+                  <span class="bg__year">2025</span>
+                  <div><p class="bg__title">BSc in Computer Science &amp; Engineering</p><p class="bg__sub">Southeast University, Dhaka</p></div>
+                </li>
+                <li class="bg__item">
+                  <span class="bg__year">2019</span>
+                  <div><p class="bg__title">Diploma in Computer Technology</p><p class="bg__sub">Bangladesh Institute of Information Technology, Bogura</p></div>
+                </li>
+              </ul>
+            </div>
+            <div class="bg__col">
+              <h3 class="bg__heading">Recognition</h3>
+              <ul class="bg__list" data-stagger>
+                <li class="bg__item">
+                  <span class="bg__year">2024</span>
+                  <div><p class="bg__title">1st Runner-up, <span class="nowrap">Inter-University</span> Quiz Contest</p><p class="bg__sub">TVE Skill Innovation Fest</p></div>
+                </li>
+                <li class="bg__item">
+                  <span class="bg__year">2018</span>
+                  <div><p class="bg__title">Best Presentation, Rajshahi Division</p><p class="bg__sub">Digital Innovation Fair — a2i, ICT Ministry</p></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───────────── 07 CONTACT ───────────── -->
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="wrap">
+          <p class="label"><span class="label__idx">07</span><span>Contact</span></p>
+          <h2 class="contact__title" id="contact-title" data-split>Let’s build<br /> something <em class="nowrap">that lasts.</em></h2>
+
+          <div class="contact__row">
+            <p class="contact__lede" data-fade>
+              Have a project, a product or a hard backend problem? My inbox is open — I reply fast.
+            </p>
+            <div class="contact__mail" data-fade>
+              <a class="contact__email u" href="mailto:shasan2200@gmail.com">shasan2200@gmail.com</a>
+              <button class="copy" type="button" data-copy="shasan2200@gmail.com" aria-label="Copy email address">
+                <span class="copy__inner"><span>Copy</span><span>Copied</span></span>
+              </button>
+            </div>
+          </div>
+
+          <ul class="contact__links" data-stagger>
+            <li>
+              <a class="contact__link" href="https://www.linkedin.com/in/sharifuzzaman-hasan-0b561521a/" target="_blank" rel="noopener">
+                <span class="contact__key">LinkedIn</span>
+                <span class="contact__val">sharifuzzaman-hasan</span>
+                <span class="contact__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact__link" href="https://github.com/SharifuzzamanShaon" target="_blank" rel="noopener">
+                <span class="contact__key">GitHub</span>
+                <span class="contact__val">SharifuzzamanShaon</span>
+                <span class="contact__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact__link" href="tel:+8801302216999">
+                <span class="contact__key">Phone</span>
+                <span class="contact__val">+880 1302-216999</span>
+                <span class="contact__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact__link" href="assets/Sharifuzzaman-Hasan-CV.pdf" target="_blank" rel="noopener">
+                <span class="contact__key">Résumé</span>
+                <span class="contact__val">PDF, 2 pages</span>
+                <span class="contact__arrow"><svg class="i"><use href="#i-arrow-ur" /></svg></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p class="footer__name" aria-hidden="true"><span class="footer__fit">Sharifuzzaman Hasan</span></p>
+        <div class="footer__bar">
+          <p>© <span data-year>2026</span> Sharifuzzaman Hasan</p>
+          <p>Dhaka — <time data-clock="hm">--:--</time> GMT+6</p>
+          <a class="to-top link-arrow" href="#top">
+            <span class="u">Back to top</span>
+            <span class="ico ico--up"><svg class="i"><use href="#i-arrow-up" /></svg></span>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <p class="visually-hidden" aria-live="polite" id="live-region"></p>
+  </body>
+</html>
