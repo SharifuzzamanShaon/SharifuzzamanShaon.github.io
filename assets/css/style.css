@@ -463,7 +463,7 @@ a:focus-visible .ico--up .i {
 }
 .intro__count {
   overflow: clip;
-  font-size: clamp(5rem, 19vw, 17rem);
+  font-size: clamp(3rem, 11vw, 10rem);
   line-height: 0.82;
   font-weight: 300;
   letter-spacing: -0.06em;

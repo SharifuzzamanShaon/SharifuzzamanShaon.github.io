@@ -579,19 +579,28 @@
     });
   };
 
-  // Intro — counter, then the panel lifts away
+  // Intro — countdown words, then the panel lifts away
   const introIn = () =>
     new Promise((resolve) => {
       const num = $(".intro__num");
-      const counter = { v: 0 };
+      const words = ["3", "2", "1", "build", "run", "live"];
+      const start = 0.5;
+      const step = 0.3;
       try {
         sessionStorage.setItem("intro-seen", "1");
       } catch (e) {}
-      gsap
+      num.textContent = words[0];
+      const tl = gsap
         .timeline({ onComplete: resolve })
-        .fromTo(".intro__line > span, .intro__num", { y: 0, yPercent: 110 }, { yPercent: 0, duration: 1.1, ease: "expo.out", stagger: 0.08 }, 0)
-        .to(counter, { v: 100, duration: 1.5, ease: "power2.inOut", onUpdate: () => (num.textContent = Math.round(counter.v)) }, 0.1)
-        .to(".intro__bar span", { scaleX: 1, duration: 1.5, ease: "power2.inOut" }, 0.1);
+        .fromTo(".intro__line > span", { y: 0, yPercent: 110 }, { yPercent: 0, duration: 1.1, ease: "expo.out", stagger: 0.08 }, 0)
+        .fromTo(num, { y: 0, yPercent: 110 }, { yPercent: 0, duration: 0.5, ease: "expo.out" }, 0)
+        .to(".intro__bar span", { scaleX: 1, duration: start + step * words.length - 0.1, ease: "power2.inOut" }, 0.1);
+      words.slice(1).forEach((word, i) => {
+        const at = start + i * step;
+        tl.to(num, { yPercent: -110, duration: 0.12, ease: "power2.in" }, at)
+          .call(() => (num.textContent = word), null, at + 0.12)
+          .fromTo(num, { yPercent: 110 }, { yPercent: 0, duration: 0.16, ease: "power2.out" }, at + 0.12);
+      });
     });
 
   const introOut = () => {
